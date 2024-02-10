@@ -17,3 +17,24 @@ function toggleDetail(e){
 
     // console.log($(item).children(".about-exp-item-detail"))
 }
+
+function onFromSubmit(e){
+    e.preventDefault()
+    const email = $('#inp_email')
+    const subject = $('#inp_subject')
+    const message = $('#inp_message')
+
+    if (!$(email).val()) {
+        alert("Email is required")
+    }else if (!$(subject).val()) {
+        alert("Subject is required")
+    }else if (!$(message).val()) {
+        alert("Message is required")
+    }else {
+        alert("Form Submitted")
+        $(Email).val("")
+        $(Subject).val("")
+        $(Message).val("")
+        
+    }
+}
